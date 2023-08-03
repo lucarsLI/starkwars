@@ -22,19 +22,15 @@ let template = {
 //     })
 // }
 //
-// for (let i = 10000; i < 18000; i++) {
-//     let token_id = 200000000 + i;
-//     let obj = JSON.parse(JSON.stringify(template))
-//     obj.image = "https://lucarsli.github.io/starkwars/images/1/" + Math.floor(Math.random() * 18) + ".png"
-//     obj.name = "StarkWars Aircraft #" + token_id
-//
-//     //保存到文件
-//     fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
-//         if (err) {
-//             console.log(err);
-//         }
-//     })
-// }
+for (let i = 18000; i < 81000; i++) {
+    let token_id = 200000000 + i;
+    let obj = JSON.parse(JSON.stringify(template))
+    obj.image = "https://lucarsli.github.io/starkwars/images/1/" + Math.floor(Math.random() * 18) + ".png"
+    obj.name = "StarkWars Aircraft #" + token_id
+
+    //保存到文件
+    fs.writeFileSync('./json/' + token_id + '.json', JSON.stringify(obj))
+}
 //
 // for (let i = 10000; i < 50000; i++) {
 //     let token_id = 300000000 + i;
@@ -50,18 +46,18 @@ let template = {
 //     })
 // }
 //
-for (let i = 10000; i < 50000; i++) {
-    let token_id = 400000000 + i;
-    let obj = JSON.parse(JSON.stringify(template))
-    obj.image = "https://lucarsli.github.io/starkwars/images/3/" + Math.floor(Math.random() * 17) + ".png"
-    obj.name = "StarkWars Base #" + token_id
-
-    //保存到文件
-    fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
-        if (err) {
-            console.log(err);
-        }
-    })
-    //关闭具柄
-    // fs.close(fd, function (err) {
-}
+// for (let i = 10000; i < 50000; i++) {
+//     let token_id = 400000000 + i;
+//     let obj = JSON.parse(JSON.stringify(template))
+//     obj.image = "https://lucarsli.github.io/starkwars/images/3/" + Math.floor(Math.random() * 17) + ".png"
+//     obj.name = "StarkWars Base #" + token_id
+//
+//     //保存到文件
+//     fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
+//         if (err) {
+//             console.log(err);
+//         }
+//     })
+//     //关闭具柄
+//     // fs.close(fd, function (err) {
+// }
