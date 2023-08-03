@@ -8,7 +8,7 @@ let template = {
     "attributes": []
 }
 
-for (let i = 10000; i < 50000; i++) {
+for (let i = 40000; i < 81000; i++) {
     let token_id = 100000000 + i;
     let obj = JSON.parse(JSON.stringify(template))
     obj.image = "https://lucarsli.github.io/starkwars/images/0/" + Math.floor(Math.random() * 15) + ".png"
@@ -22,7 +22,7 @@ for (let i = 10000; i < 50000; i++) {
     })
 }
 //
-// for (let i = 10000; i < 50000; i++) {
+// for (let i = 10000; i < 18000; i++) {
 //     let token_id = 200000000 + i;
 //     let obj = JSON.parse(JSON.stringify(template))
 //     obj.image = "https://lucarsli.github.io/starkwars/images/1/" + Math.floor(Math.random() * 18) + ".png"
