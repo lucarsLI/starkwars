@@ -8,19 +8,19 @@ let template = {
     "attributes": []
 }
 
-for (let i = 40000; i < 81000; i++) {
-    let token_id = 100000000 + i;
-    let obj = JSON.parse(JSON.stringify(template))
-    obj.image = "https://lucarsli.github.io/starkwars/images/0/" + Math.floor(Math.random() * 15) + ".png"
-    obj.name = "StarkWars Character #" + token_id
-
-    //保存到文件
-    fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
-        if (err) {
-            console.log(err);
-        }
-    })
-}
+// for (let i = 40000; i < 81000; i++) {
+//     let token_id = 100000000 + i;
+//     let obj = JSON.parse(JSON.stringify(template))
+//     obj.image = "https://lucarsli.github.io/starkwars/images/0/" + Math.floor(Math.random() * 15) + ".png"
+//     obj.name = "StarkWars Character #" + token_id
+//
+//     //保存到文件
+//     fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
+//         if (err) {
+//             console.log(err);
+//         }
+//     })
+// }
 //
 // for (let i = 10000; i < 18000; i++) {
 //     let token_id = 200000000 + i;
@@ -50,16 +50,18 @@ for (let i = 40000; i < 81000; i++) {
 //     })
 // }
 //
-// for (let i = 10000; i < 50000; i++) {
-//     let token_id = 400000000 + i;
-//     let obj = JSON.parse(JSON.stringify(template))
-//     obj.image = "https://lucarsli.github.io/starkwars/images/3/" + Math.floor(Math.random() * 17) + ".png"
-//     obj.name = "StarkWars Base #" + token_id
-//
-//     //保存到文件
-//     fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
-//         if (err) {
-//             console.log(err);
-//         }
-//     })
-// }
+for (let i = 10000; i < 50000; i++) {
+    let token_id = 400000000 + i;
+    let obj = JSON.parse(JSON.stringify(template))
+    obj.image = "https://lucarsli.github.io/starkwars/images/3/" + Math.floor(Math.random() * 17) + ".png"
+    obj.name = "StarkWars Base #" + token_id
+
+    //保存到文件
+    fs.writeFile('./json/' + token_id + '.json', JSON.stringify(obj), function (err) {
+        if (err) {
+            console.log(err);
+        }
+    })
+    //关闭具柄
+    // fs.close(fd, function (err) {
+}
